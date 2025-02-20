@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Create Room</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="content-container">
+      <div class="header">
+        <h1>Create Room</h1>
+        <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
+      </div>
+      <form id="room-form">
+        <input type="text" id="room-name" placeholder="Room Name" required />
+        <input type="datetime-local" id="start-time" required />
+        <input type="datetime-local" id="end-time" required />
+        <div class="text-options">
+          <div class="option-group">
+            <label>Text Source:</label>
+            <select id="text-source">
+              <option value="manual">Manual Input</option>
+              <option value="generated">Auto Generate</option>
+            </select>
+          </div>
+          <div id="generator-options" style="display: none">
+            <div class="option-group">
+              <label>Minimum Word Length:</label>
+              <input type="number" id="min-length" value="5" min="1" max="15" />
+            </div>
+            <div class="option-group">
+              <label>Maximum Word Length:</label>
+              <input type="number" id="max-length" value="10" min="1" max="15" />
+            </div>
+            <div class="option-group">
+              <label>Word Count:</label>
+              <input type="number" id="word-count" value="200" min="10" max="500" />
+            </div>
+            <div class="option-group">
+              <label>Random Order:</label>
+              <input type="checkbox" id="random-order" checked />
+            </div>
+            <button type="button" id="generate-btn">Generate Text</button>
+          </div>
+        </div>
+        <textarea id="room-text" placeholder="Text for typing test" required></textarea>
+        <button type="submit" class="primary-btn">Create Room</button>
+      </form>
+    </div>
+    <script type="module" src="/js/create-room.js"></script>
+  </body>
+</html>

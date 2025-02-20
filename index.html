@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Contest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="user-info" class="user-info">
+        <div id="user-avatar" class="avatar"></div>
+        <button id="logout-btn" style="display: none">Logout</button>
+    </div>
+    
+    <div id="content-container">
+        <div class="hero-section">
+            <h1>Typing Contest</h1>
+            <p class="subtitle">Test your typing speed and race against others!</p>
+        </div>
+
+        <div id="main-menu">
+            <div class="menu-section practice">
+                <h2>Practice Mode</h2>
+                <p>Practice typing with customizable settings</p>
+                <button onclick="window.location.href='practice.html'" class="primary-btn">Start Practice</button>
+            </div>
+
+            <div class="menu-section multiplayer">
+                <h2>Multiplayer</h2>
+                <div id="guest-options">
+                    <p>Create an account to access multiplayer features</p>
+                    <button onclick="window.location.href='create-user.html'" class="primary-btn">Create User</button>
+                    <button onclick="window.location.href='leaderboard.html'" class="secondary-btn">View Leaderboard</button>
+                </div>
+                <div id="user-options" style="display: none">
+                    <button onclick="window.location.href='create-room.html'" class="primary-btn">Create Room</button>
+                    <button onclick="window.location.href='rooms.html'" class="primary-btn">Join Room</button>
+                    <button onclick="window.location.href='leaderboard.html'" class="secondary-btn">Leaderboard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/js/index.js"></script>
+</body>
+</html>

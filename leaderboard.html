@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard - Typing Contest</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="content-container">
+      <h1>Leaderboard</h1>
+      <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
+      <button onclick="toggleFullscreen()" class="fullscreen-button">Fullscreen</button>
+
+      <div class="room-filters">
+        <button class="filter-btn" data-filter="all">All Rooms</button>
+        <button class="filter-btn active" data-filter="today">Today</button>
+        <button class="filter-btn" data-filter="week">This Week</button>
+        <button class="filter-btn" data-filter="month">This Month</button>
+      </div>
+
+      <div id="room-list" class="room-list"></div>
+      <div id="race-track" class="race-track" style="display: none">
+        <div class="finish-line"></div>
+        <button onclick="hideRaceTrack()" class="back-button">Back to Rooms</button>
+      </div>
+    </div>
+    <script type="module" src="/js/leaderboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Available Rooms</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="user-info">
+      <div id="user-avatar" style="display: none"></div>
+      <button id="logout-btn" style="display: none">Logout</button>
+    </div>
+
+    <div id="content-container">
+      <div class="rooms-header">
+        <button class="back-button" onclick="window.location.href='index.html'">←</button>
+        <h1>Available Rooms</h1>
+        <button class="create-room-btn" onclick="window.location.href='create-room.html'">+ Create Room</button>
+      </div>
+
+      <div class="room-filters">
+        <button class="filter-btn active" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+
+      <div id="room-list" class="room-grid"></div>
+    </div>
+    <script type="module" src="/js/rooms.js"></script>
+  </body>
+</html>

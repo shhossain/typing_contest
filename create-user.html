@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Create User</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="content-container">
+      <h1>Create User</h1>
+      <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
+      <form id="user-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="text" id="user-id" placeholder="User ID" required />
+        <input type="url" id="profile-pic" placeholder="Profile Picture URL (optional)" />
+        <button type="submit" class="primary-btn">Create User</button>
+      </form>
+    </div>
+    <script type="module" src="/js/create-user.js"></script>
+  </body>
+</html>
