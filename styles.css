@@ -40,7 +40,7 @@ button {
 #word-box {
   font-size: 24px;
   color: white;
-  width: 100%;
+  /* width: 100%; */
   max-width: 900px;
   height: 100px;
   overflow-y: auto; /* Changed from hidden to auto */
@@ -48,7 +48,7 @@ button {
   position: relative;
   line-height: 1.6;
   padding: 1.5rem;
-  margin: 1.5rem 0;
+  /* margin: 1.5rem 0; */
   background: linear-gradient(to bottom, #111111, #0d0d0d);
   border: 1px solid #222;
   border-radius: 8px;
