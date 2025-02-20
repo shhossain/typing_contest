@@ -1,59 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Practice Mode - Typing Contest</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div id="content-container">
-        <div class="practice-header">
-            <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
-            <h1>Practice Mode</h1>
-        </div>
+      <div class="practice-header">
+        <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
+        <h1>Practice Mode</h1>
+      </div>
 
-        <div class="text-options">
-            <div class="option-group">
-                <label>Time (seconds):</label>
-                <select id="time-select">
-                    <option value="30">30s</option>
-                    <option value="60" selected>60s</option>
-                    <option value="120">2min</option>
-                    <option value="300">5min</option>
-                </select>
-            </div>
-            <div class="option-group">
-                <label>Min Word Length:</label>
-                <input type="number" id="min-length" value="3" min="1" max="15">
-            </div>
-            <div class="option-group">
-                <label>Max Word Length:</label>
-                <input type="number" id="max-length" value="8" min="1" max="15">
-            </div>
-            <div class="option-group">
-                <label>Word Count:</label>
-                <input type="number" id="word-count" value="100" min="10" max="500">
-            </div>
-            <div class="option-group">
-                <label>Random Order:</label>
-                <input type="checkbox" id="random-order" checked>
-            </div>
-            <button id="generate-btn">Generate New Text</button>
-            <button id="retry-btn" style="display: none;">Retry Same Text</button>
+      <div class="text-options">
+        <div class="option-group">
+          <label>Time (seconds):</label>
+          <select id="time-select">
+            <option value="30">30s</option>
+            <option value="60" selected>60s</option>
+            <option value="120">2min</option>
+            <option value="300">5min</option>
+          </select>
         </div>
+        <div class="option-group">
+          <label>Min Word Length:</label>
+          <input type="number" id="min-length" value="3" min="1" max="15" />
+        </div>
+        <div class="option-group">
+          <label>Max Word Length:</label>
+          <input type="number" id="max-length" value="8" min="1" max="15" />
+        </div>
+        <div class="option-group">
+          <label>Word Count:</label>
+          <input type="number" id="word-count" value="100" min="10" max="500" />
+        </div>
+        <div class="option-group">
+          <label>Random Order:</label>
+          <input type="checkbox" id="random-order" checked />
+        </div>
+        <button id="generate-btn">Generate New Text</button>
+        <button id="retry-btn" style="display: none">Retry Same Text</button>
+      </div>
 
-        <div id="timer">60</div>
-        <div id="word-box"></div>
-        <div id="input-container">
-            <input type="text" id="input-box" placeholder="Click here to start typing...">
-        </div>
-        <div id="result-text"></div>
-        <div id="stats" style="display: none;">
-            <div class="stat-item">WPM: <span id="wpm-stat">0</span></div>
-            <div class="stat-item">Accuracy: <span id="accuracy-stat">0%</span></div>
-            <div class="stat-item">Errors: <span id="error-stat">0</span></div>
-        </div>
+      <div id="timer">60</div>
+      <div id="word-box"></div>
+      <div id="input-container">
+        <input
+          type="text"
+          id="input-box"
+          placeholder="Click here to start typing..."
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+      </div>
+      <div id="result-text"></div>
+      <div id="stats" style="display: none">
+        <div class="stat-item">WPM: <span id="wpm-stat">0</span></div>
+        <div class="stat-item">Accuracy: <span id="accuracy-stat">0%</span></div>
+        <div class="stat-item">Errors: <span id="error-stat">0</span></div>
+      </div>
     </div>
     <script type="module" src="js/practice.js"></script>
-</body>
+  </body>
 </html>
