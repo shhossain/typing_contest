@@ -71,7 +71,7 @@ document.querySelectorAll('.filter-btn').forEach(button => {
         // Update current filter
         currentFilter = button.dataset.filter;
 
-// Get the latest rooms data and refresh display
+        // Get the latest rooms data and refresh display
         const roomsRef = ref(db, 'rooms');
         onValue(roomsRef, (snapshot) => {
             const rooms = snapshot.val();
@@ -94,12 +94,15 @@ function displayRooms(rooms) {
             const timeLeft = formatTimeLeft(room.startTime, room.endTime);
             const card = document.createElement('div');
             card.className = 'room-card';
+            // <button onclick="window.location.href='room.html?id=${roomId}'">${currentFilter === 'completed' ? 'View Results' : 'Join Room'}</button>
             card.innerHTML = `
                 <h3>${room.name}</h3>
                 <p>${timeLeft}</p>
-                <button onclick="window.location.href='room.html?id=${roomId}'">${currentFilter === 'completed' ? 'View Results' : 'Join Room'}</button>
             `;
             roomList.appendChild(card);
+            card.addEventListener('click', () => {
+                window.location.href = `room.html?id=${roomId}`;
+            });
         }
     });
 

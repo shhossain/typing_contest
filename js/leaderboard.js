@@ -233,7 +233,7 @@ function createRoomList(rooms) {
         card.innerHTML = `
             <h3>${room.name}</h3>
             <p>Status: ${status}</p>
-            <button onclick="showRaceTrack('${room.id}')">${buttonText}</button>
+            <button onclick="showRaceTrack('${room.id}')" class="primary-btn">${buttonText}</button>
         `;
 
         if (Date.now() > room.endTime) {
